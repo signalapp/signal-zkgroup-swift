@@ -1,0 +1,18 @@
+PODS:
+  - ZKGroup (0.0.1)
+  - ZKGroup/Tests (0.0.1)
+
+DEPENDENCIES:
+  - ZKGroup (from `../../`)
+  - ZKGroup/Tests (from `../../`)
+
+EXTERNAL SOURCES:
+  ZKGroup:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  ZKGroup: 6277db4b7c2e10a530b584bf27d9b070b3412e7d
+
+PODFILE CHECKSUM: 414c9fc1061997b0c9119f9418fd0079a3f3dae5
+
+COCOAPODS: 1.7.0

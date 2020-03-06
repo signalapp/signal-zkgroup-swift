@@ -8,16 +8,23 @@
 
 Pod::Spec.new do |s|
   s.name         = "ZKGroup"
-  s.version      = "0.0.1"
+  s.version      = "0.4.0"
   s.summary      = "Swift API for the Rust zkgroup crate."
   s.homepage     = "https://signal.org/"
   s.license      = { :type => "GPLv3", :file => "LICENSE" }
   s.authors      = { "Signal iOS" => "ios@signal.org" }
   s.source = { :git => "https://github.com/signalapp/signal-groupzk-swift.git", :tag => "#{s.version}" }
 
-  s.ios.deployment_target = "8.0"
+  s.ios.deployment_target = "10.0"
+
+  s.ios.vendored_library = "ZKGroup/libzkgroup/libzkgroup_ios.a"
 
   s.source_files  = "ZKGroup/**/*.{h,swift}"
+
+  s.preserve_paths = 'ZKGroup/libzkgroup/module.modulemap'
+  s.pod_target_xcconfig = {
+      'SWIFT_INCLUDE_PATHS' => '$(PODS_TARGET_SRCROOT)/ZKGroup/libzkgroup',
+  }
 
   s.requires_arc = true
 
