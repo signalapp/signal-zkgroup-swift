@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   s.ios.vendored_library = "ZKGroup/libzkgroup/libzkgroup_ios.a"
 
   s.source_files  = "ZKGroup/**/*.{h,swift}"
+  s.public_header_files = "ZKGroup/*.h"
 
   s.preserve_paths = 'ZKGroup/libzkgroup/module.modulemap'
   s.pod_target_xcconfig = {
